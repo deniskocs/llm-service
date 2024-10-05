@@ -10,5 +10,3 @@ if __name__ == '__main__':
     llm_api_view = LLMAPI.as_view('llm_api')
     app.add_url_rule('/llm_api', view_func=llm_api_view, methods=['POST', 'OPTIONS'])
     app.run(host='0.0.0.0', port=8090)
-
-

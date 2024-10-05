@@ -1,12 +1,10 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftConfig, PeftModel
 
 class ModelHolder:
     def __init__(self):
         self.model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1", device_map="auto", torch_dtype=torch.bfloat16)
         self.tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
-        # adapter_model_name = "/pretrained/general_purpose/adapter_model"
         adapter_model_name = "/pretrained/general_purpose"
 
         self.model.load_adapter(adapter_model_name)
