@@ -1,8 +1,13 @@
-flask
+flask~=3.0.3
 flask-cors
-transformers
+transformers~=4.45.1
 accelerate
 peft
+protobuf
+sentencepiece
+bitsandbytes
+huggingface-hub~=0.25.1
+torch~=2.4.1
 
 pyflakes
 mypy
